@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Utilly</title>
+  <style>
+    body { 
+      color: rgb(255, 255, 255);
+      background-color: rgb(44, 47, 51);
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 5px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #fff;
+      margin: 40px 0;
+    }
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+    }
+    .centered {
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      font-weight: bold; 
+      padding: 7px 15px; 
+      margin: 7px 0;
+      border-radius: 5px;
+    }
+    .green {
+      background-color: #43B581;
+    }
+    .mint {
+      background-color: #54C3A6;
+    }
+    .discord {
+      background-color: #7289da;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    tbody {
+      vertical-align: middle;
+    }
+    th {
+      text-align: left;
+      vertical-align: top;
+      padding-bottom: 10px;
+    }
+    td {
+      width: 33.3333%;
+      padding: 10px;
+      border-right: solid 2px rgb(44, 47, 51); 
+      border-left: solid 2px rgb(44, 47, 51);
+    }
+    .zebra {
+      background-color: rgb(76, 81, 87);
+    }
+    @media screen and (max-width: 375px) {
+      td {
+        padding: 6px;
+      }
+    }
+    @media screen and (max-width: 320px) {
+      table {
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Utilly!</h1>
+    
+  <p class="centered">
+    <a class="btn green" href="https://discordapp.com/oauth2/authorize?client_id=716530326662545450&amp;scope=bot&amp;permissions=355439">Invite Utilly</a><br />
+    <a class="btn green" href="https://discord.gg/FVczWXP" rel="noopener noreferrer" target="_blank">Join support server</a><br />
+    <a class="btn mint" href="https://utilly.netlify.app/official">Visit Utilly Official's site</a>
+  </p>
+    
+  <hr>
+    
+  <h2>Commands</h2>
+    
+  <p>Variables are indicated with {what-to-fill-in}, optional variables with [what-to-fill-in]</p>
+    
+  <table>
+  <tbody>
+    <tr>
+      <th>Command:</th>
+      <th>Description:</th>
+      <th>Required permission(s):</th>
+    </tr>
+      
+    <tr>
+      <td class="zebra">&gt;help</td>
+      <td class="zebra">Shows a help menu</td>
+      <td class="zebra">None</td>
+    </tr>
+      
+    <tr>
+      <td>&gt;guildid (&gt;guild-id)</td>
+      <td>Gives the guild ID from the server</td>
+      <td>None</td>
+    </tr>
+            
+    <tr>
+      <td class="zebra">&gt;serverinfo (&gt;server-info)</td>
+      <td class="zebra">Gives info about the server</td>
+      <td class="zebra">None</td>
+    </tr>
+      
+    <tr>
+      <td>&gt;myinfo</td>
+      <td>Gives info about you</td>
+      <td>None</td>
+    </tr>
+      
+    <tr>
+      <td class="zebra">&gt;info {@user}</td>
+      <td class="zebra">Gives info about {@user}</td>
+      <td class="zebra">None</td>
+    </tr>
+      
+    <tr>
+      <td>&gt;invite</td>
+      <td>Says an invite for Utilly</td>
+      <td>None</td>
+    </tr>
+            
+    <tr>
+      <td class="zebra">&gt;invitestudio (&gt;is) [MaxUses] [Age]</td>
+      <td class="zebra">Creates an invite to the current channel</td>
+      <td class="zebra">None</td>
+    </tr>
+      
+    <tr>
+      <td>&gt;ping</td>
+      <td>Gives Utilly's latency in ms</td>
+      <td>None</td>
+    </tr>
+            
+    <tr>
+      <td class="zebra">&gt;leave</td>
+      <td class="zebra">Leave the current server</td>
+      <td class="zebra">None</td>
+    </tr>
+            
+    <tr>
+      <td>&gt;channel-info (&gt;ci, &gt;channelinfo)</td>
+      <td>Gives information about the current channel</td>
+      <td>None</td>
+    </tr>
+      
+    <tr>
+      <td class="zebra">&gt;kick {@user} [reason]</td>
+      <td class="zebra">Kicks {@user} for [reason]</td>
+      <td class="zebra">kick_members</td>
+    </tr>
+            
+    <tr>
+      <td>&gt;ban {@user} [reason]</td>
+      <td>Bans {@user} for [reason]</td>
+      <td>ban_members</td>
+    </tr>
+      
+    <tr>
+      <td class="zebra">&gt;purge (&gt;clear) [amount]</td>
+      <td class="zebra">Clears [amount] messages</td>
+      <td class="zebra">manage_messages</td>
+    </tr>
+            
+    <tr>
+      <td>&gt;nuke</td>
+      <td>Clears all messages in a channel*</td>
+      <td>manage_messages</td>
+    </tr>
+            
+    <tr>
+      <td class="zebra wtf">&gt;slowmode {amount}</td>
+      <td class="zebra">Sets the slowmode to {amount} seconds, 0 to turn it off</td>
+      <td class="zebra">manage_channels</td>
+    </tr>
+  </tbody>
+  </table>
+    
+  <p>*Messages older then 2 weeks can't be deleted because of the Discord API</p>
+    
+  <hr>
+    
+  <h2>Contact</h2>
+    
+  <p class="centered">
+    <a class="btn discord" href="https://discord.gg/FVczWXP" rel="noopener noreferrer" target="_blank">Join Discord</a><br />
+    <a class="btn discord" href="https://discord.gg/g5pw763">Join Utilly | Stay Connected</a><br />
+    <a class="btn mint" href="mailto:dante_nl@icloud.com">Send an e-mail</a>
+  </p>
+
+</body>
+</html>
